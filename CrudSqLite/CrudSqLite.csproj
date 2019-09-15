@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Business\ClienteBusiness.cs" />
     <Compile Include="Dao\ClienteDao.cs" />
+    <Compile Include="Linq\LinqTeste.cs" />
     <Compile Include="Modal\Cliente.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
