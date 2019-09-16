@@ -12,15 +12,19 @@ namespace CrudSqLite.Dao
 {
     public class ClienteDao
     {
+        //C:\Users\jessi\OneDrive\Documentos\CrudSqLite\Banco
+
         private string conexao = @"Data source = C:\Users\jessi_001\source\repos\CrudSqLite\Banco\BancoSqLite.db; Version = 3;";
         private string nomebanco = @"C:\Users\jessi_001\source\repos\CrudSqLite\Banco\BancoSqLite.db";
 
+        private string conexaoM = @"Data source = C:\Users\jessi\OneDrive\Documentos\CrudSqLite\Banco\BancoSqLite.db; Version = 3;";
+        private string nomebancoM = @"C:\Users\jessi\OneDrive\Documentos\CrudSqLite\Banco\BancoSqLite.db";
 
         public void criarBanco(SQLiteConnection conn)
         {
-            if (!File.Exists(nomebanco))
+            if (!File.Exists(nomebancoM))
             {
-                SQLiteConnection.CreateFile(nomebanco);
+                SQLiteConnection.CreateFile(nomebancoM);
                 conn.Open();
                 
                 try
@@ -55,7 +59,7 @@ namespace CrudSqLite.Dao
         }
         public SQLiteConnection conectar()
         {
-            SQLiteConnection conn = new SQLiteConnection(conexao);
+            SQLiteConnection conn = new SQLiteConnection(conexaoM);
             try
             {
                 conn.Open();
